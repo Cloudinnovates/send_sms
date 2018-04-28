@@ -1,0 +1,21 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Contact</th>
+      <th>Select Contact</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr (click)="contactDetail(contact)"  *ngFor="let contact of ContactList" data-toggle="tooltip" title="click to view details of this contact!">
+      <td>{{contact.id}}</td>
+      <td>{{contact.firstName}} {{contact.lastName}}</td>
+      <td>{{contact.contact}}</td>
+      <td>
+        <button  routerLinkActive="active" (click)="sendMessage(contact)" data-toggle="tooltip" title="click to send message!">Send Message</button>
+      </td>
+      <!-- [routerLink]="['/ContactList/SendMessage']" [queryParams]="{contact: contact.number}" -->
+    </tr>
+  </tbody>
+</table>
