@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('frontend App', () => {
+describe('send_sms App', () => {
   let page: AppPage;
 
   beforeEach(() => {
